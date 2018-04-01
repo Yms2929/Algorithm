@@ -12,5 +12,5 @@ public class Practice {
 		
 		System.out.println(Integer.valueOf(character)); // 문자를 int형으로 변환
 	}
-
+	
 }
