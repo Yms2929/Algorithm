@@ -7,8 +7,31 @@ import java.util.StringTokenizer;
 
 public class SystemChange {
 
-	// 8진수 2진수 변환
+	// -2진수
 	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		StringBuilder sb = new StringBuilder();
+		
+		int N = Integer.parseInt(st.nextToken());
+		
+		if (N == 0) {
+			System.out.println(N);
+			return;
+		}
+		
+		while(N != 1) {
+			sb.append(Math.abs(N % (-2)));
+			N = (int) Math.ceil((double)N / (-2));
+		}
+		
+		sb.append(N);
+		
+		System.out.println(sb.reverse());
+	}
+	
+	// 8진수 2진수 변환
+	/*public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		StringBuilder sb = new StringBuilder();
@@ -37,7 +60,7 @@ public class SystemChange {
 		}	
 		
 		System.out.println(sb.toString());
-	}
+	}*/
 	
 	// 2진수 8진수로 변환
 	/*public static void main(String[] args) throws IOException {
