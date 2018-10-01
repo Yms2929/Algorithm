@@ -11,6 +11,31 @@ public class SystemChange {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
+		String N = st.nextToken();
+		int B = Integer.parseInt(st.nextToken());
+	
+		long result = 0;
+		char[] ch = N.toCharArray();
+		int temp = 0;
+		
+		for (int i = 0; i < ch.length; i++) {
+			if ('A' <= ch[i] && ch[i] <= 'Z') {
+				temp = ch[i] - 55;
+			}
+			else {
+				temp = ch[i] - '0';
+			}
+			
+			result = (long) (result + temp * Math.pow(B, ch.length - i - 1));
+		}
+		
+		System.out.println(result);
+	}
+	
+	/*public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
 		int N = Integer.parseInt(st.nextToken());
 		int B = Integer.parseInt(st.nextToken());
 		
@@ -29,6 +54,6 @@ public class SystemChange {
 		}
 		
 		System.out.println(result);
-	}
+	}*/
 
 }
