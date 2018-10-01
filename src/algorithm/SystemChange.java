@@ -7,7 +7,36 @@ import java.util.StringTokenizer;
 
 public class SystemChange {
 
-	public static void main(String[] args) throws IOException {
+	// 2진수 8진수로 변환
+	/*public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		StringBuilder sb = new StringBuilder();
+		
+		String N = st.nextToken();
+		
+		if (N.length() % 3 == 1) {
+			N = "00" + N;
+		}
+		else if (N.length() % 3 == 2) {
+			N = "0" + N;
+		}
+		
+		for (int i = 0; i < N.length(); i+=3) {
+			int sum = 0;
+			
+			sum += (int) (N.charAt(i) - 48) * 4;
+			sum += (int) (N.charAt(i + 1) - 48) * 2;
+			sum += (int) (N.charAt(i + 2) - 48) * 1;
+			
+			sb.append(sum);
+		}
+		
+		System.out.println(sb);
+	}*/
+	
+	// 다른 진수를 10진수로 변환
+	/*public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
@@ -30,8 +59,9 @@ public class SystemChange {
 		}
 		
 		System.out.println(result);
-	}
+	}*/
 	
+	// 10진수를 다른진수로 변환
 	/*public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
