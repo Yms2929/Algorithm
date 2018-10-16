@@ -1,4 +1,4 @@
-package fullsearch;
+package samsung;
 
 import java.util.Scanner;
 
